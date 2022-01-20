@@ -9,8 +9,11 @@ func myPanic() {
 func main() {
 	//defer will be active after a panic
 	defer func() {
-		fmt.Println("defer")
+		if err := recover(); err != nil {
+			fmt.Println("Recover from error:\n", err)
+		}
 	}()
 	myPanic()
+	//this code will not run
 	fmt.Println("after myPanic")
 }
