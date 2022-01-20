@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 type point struct {
@@ -38,32 +39,45 @@ func main() {
 	//1c8
 	//fmt.Printf("hex: %x\n", 456)
 
-	//
-	fmt.Printf("float1: %f\n", 78.9)
-	//
+	//78.900000
+	//fmt.Printf("float1: %f\n", 78.9)
+
+	//1.234000e+08
 	//fmt.Printf("float2: %e\n", 123400000.0)
+
+	//1.234000E+08
 	//fmt.Printf("float3: %E\n", 123400000.0)
-	//
+
+	//"string"
 	//fmt.Printf("str1: %s\n", "\"string\"")
-	//
+
+	//"\"string\""
 	//fmt.Printf("str2: %q\n", "\"string\"")
-	//
+
+	//base16
+	//6865782074686973
 	//fmt.Printf("str3: %x\n", "hex this")
-	//
+
+	//0xc000014090
 	//fmt.Printf("pointer: %p\n", &p)
-	//
+
+	//width1: |    12|   345|
 	//fmt.Printf("width1: |%6d|%6d|\n", 12, 345)
-	//
+
+	//width2: |  1.20|  3.45|
 	//fmt.Printf("width2: |%6.2f|%6.2f|\n", 1.2, 3.45)
-	//
+
+	//width3: |1.20  |3.45  |
 	//fmt.Printf("width3: |%-6.2f|%-6.2f|\n", 1.2, 3.45)
-	//
+
+	//width4: |   foo|     b|
 	//fmt.Printf("width4: |%6s|%6s|\n", "foo", "b")
-	//
+
+	//width5: |foo   |b     |
 	//fmt.Printf("width5: |%-6s|%-6s|\n", "foo", "b")
-	//
-	//s := fmt.Sprintf("sprintf: a %s", "string")
-	//fmt.Println(s)
-	//
-	//fmt.Fprintf(os.Stderr, "io: an %s\n", "error")
+
+	s := fmt.Sprintf("sprintf: a %s", "string")
+	fmt.Println(s)
+
+	fmt.Fprintf(os.Stderr, "io: an %s\n", "error")
 }
